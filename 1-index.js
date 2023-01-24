@@ -20,9 +20,11 @@
 // `);
 // document.close();
 
+// 
+// let str ='Марія'
 
-// let str ='мене звати "Марія"'
-// if(str.includes("Марія")){
+
+// if(str.includes("марія")){
 //     console.log("yes");
 // }else{
 //     console.log("no");
