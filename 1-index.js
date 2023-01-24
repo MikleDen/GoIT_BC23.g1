@@ -1,314 +1,148 @@
-// 01-module-02-lesson
-"use strict";
-/*
- * Розгалуження if
- */
+// const r = prompt('enter radius');
+// const h = prompt('enter height');
+// const s = Math.PI*(r*r);
 
-// if (умова) {
-// тіло if
+// const v = s * h; // порахувати по правильній форумлі площу циліндра
+
+
+// document.open();
+// document.write(`
+//   ********************<br>
+//   Обьем цилиндра с площадью основы s = Math.PI*(r*r) , радиусом *R* и высотой *H* равен: <br>
+//   -------------------- <br>
+
+
+
+  
+//   v = ${v}<br><br>
+//   -------------------- <br>
+//   end.
+// `);
+// document.close();
+
+
+// let str ='мене звати "Марія"'
+// if(str.includes("Марія")){
+//     console.log("yes");
+// }else{
+//     console.log("no");
+// }
+1.//1. Напишите цикл, который выводит в консоль
+//числа от max до min по убыванию
+// // Выведите в консоль всех четных чисел от min до max
+// const max = 50;
+// const min = 23;
+
+// for (let i = max; i >= min; i--) {
+//    console.log(i);
 // }
 
-// const num = 18;
+//2. Напишіть код, який запитуватиме
+//Логін за допомогою prompt і логувати результат
+//В консоль браузера
+// введені данні можуть бути будь якого формату(великі і малі літери)
 
-// if (num >= 18) {
-//   console.log("Hello!");
+//Якщо відвідувач вводить "адмін",
+//то prompt запитує пароль.
+//Якщо нічого не ввели або натиснута клавіша Esc
+//Вивести рядок "Скасовано"
+//  Інакше вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введено пароль "Я головний",
+//то вивести рядок "Здрастуйте!"
+//інакше виводити рядок "Невірний пароль!"
+
+// const loginInput = prompt("Введите свой логин");
+
+// if (loginInput.toLowerCase()=== "адмін") {
+//   const passwordInput = prompt("Введите свой пароль");
+//   if (passwordInput) {
+//     if (passwordInput === "Я головний") {
+//       console.log("Здравствуйте");
+//     } else {
+//       console.log("Невірний пароль");
+//     }
 // } else {
-//   console.log(" Good bye!");
-// }
-
-/*
-? Дано рядок, що складається із символів, наприклад, 'abcde'.
-? Перевірте, що першим символом цього рядка є буква 'a'.
-? Якщо це так - виведіть 'так', інакше виведіть 'ні'.
-*/
-
-// const str = "abcde";
-// console.log(str.startsWith("a"));
-// if (str.startsWith("a")) {
-//   console.log("Так");
+//     console.log("Скасовано");
+//   }
 // } else {
-//   console.log("Ні");
+//   console.log("Я вас не знаю!");
 // }
 
-// const messege = str.startsWith("a") ? "Yes" : "No";
 
-// console.log(messege);
+// 3. Рядок, що складається з символів, наприклад, "abcde".
+// Перевірте, чи перший символ цього рядка - це буква "a".
+// Якщо так - логуйте  "так", інакше виведіть "ні".
+// let str = "abcde";
+// if(str[0]==='a'){
+//     console.log("yes");
+// }else console.log("no");
 
-/*
-? Запросити у користувача число, якщо число дорівнює 10,
-? то виведіть 'Вірно', інакше виведіть 'Неправильно'.
-*/
+// function str (string,firstLetter) {
 
-// const number = Number(prompt("Введіть число"));
+//     if(string[0]===firstLetter){
+//             console.log("yes");
+//         }else console.log("no");
+        
+// }
+// str("fsdccwdcver","g")
+// 4.Написати програму розрахунку об'єму циліндра, всі дані (крім числа PI) вводяться з клавіатури руками. (Число Пі в js виглядає так: Math.PI). Також потрібно вивести інформацію у такому вигляді:
+//**************
 
-// if (number === 10) {
-//   console.log("Вірно");
-// } else {
-//   console.log("Невірно");
+// Об'єм циліндра з площею основи *S* (вивіть значення), радіусом *R* та висотою *H* дорівнює:
+
+//--------------------
+
+// V = результат.
+
+// -------------------
+
+// end.
+
+// P.S. Усі зірочки та рисочки потрібно намалювати. Висновок виконувати документ (document.write())
+// const r = prompt('enter radius');
+// const h = prompt('enter height');
+// const s = Math.PI*(r*r);
+
+// const v = s * h; 
+
+// document.open();
+// document.write(`
+//   ********************<br>
+//   Об'єм циліндра з площею основи s , радіусом *R* та висотою *H* дорівнює: <br>
+//   -------------------- <br>
+
+
+//   v = ${v}<br><br>
+//   -------------------- <br>
+  
+// `);
+// document.close();
+
+// Задача 4. Порахувати сумму непарних чисел от 0 до 250.
+// const val1 = parseInt(0);
+// const val2 = parseInt(250);
+// let resultSum =0;
+
+
+
+// for(let i=val1;i<=val2 ;i++){
+
+//     if (i%2==1) {
+//        resultSum += i;
+//        console.log(resultSum);
+//     } 
 // }
 
-/*
-? У змінній min лежить число від 0 до 59.
-? Визначте, в яку чверть години потрапляє це число (у першу, другу, третю чи четверту).
-? [0 до 15) – перша чверть години
-? [15 до 30) – друга чверть години
-? [30 до 45) – третя чверть години
-? [45 до 60) – четверта чверть години
-*/
-
-// const min = 61;
-
-// if (min >= 0 && min < 15) {
-//   console.log("перша чверть години");
-// } else if (min >= 15 && min < 30) {
-//   console.log("друга чверть години");
-// } else if (min >= 30 && min < 45) {
-//   console.log("третя чверть години");
-// } else if (min >= 45 && min < 60) {
-//   console.log("четверта чверть години");
-// } else {
-//   console.log("Ви не потрапили в діапозон години!");
+// Выведите столбец четных чисел в промежутке от 0 до 100. (document.write)
+// for(let i=0;i<=100 ;i++){
+//     if (i%2==0) {
+               
+//                document.write(i+"</br>");
+//             } 
 // }
 
-/*
-? Напишіть код, який запитуватиме:
-? 'Яка «офіційна» назва JavaScript?'
-? Якщо користувач вводить ECMAScript,
-? то показати: «Вірно!», інакше – відобразити: «Не знаєте? ECMAScript!
-*/
-
-// const userInput = prompt("Яка «офіційна» назва JavaScript?");
-
-// const ofName = "ECMAScript".toLowerCase();
-
-// // const userInputModify = userInput.toLowerCase().trim();
-
-// const userInputToLowerCase = userInput.toLowerCase();
-// const userInputToLowerCaseWithoutSpase = userInputToLowerCase.trim()
-
-// if (userInputToLowerCaseWithoutSpase === ofName) {
-//   console.log("Вірно!");
-// } else {
-//   console.log("Не знаєте? ECMAScript!");
-// }
-
-/*
-? Напишіть код, який отримує число через prompt, а потім виводить у console.log:
-? 1, якщо значення більше нуля,
-? -1, якщо значення менше нуля,
-? 0, якщо значення дорівнює нулю.
-? Передбачається, що користувач вводить лише цифри.
-*/
-
-// const number = Number(prompt("Введіть число"));
-
-// if (number > 0) {
-//   console.log(1);
-// } else if (number < 0) {
-//   console.log(-1);
-// } else {
-//   console.log(0);
-// }
-
-/*
-? Перевірте за допомогою об'єкта navigator та властивості userAgent
-? який браузер у користувача, результат вивести в консоль
-*/
-
-// const userBrowser = navigator.userAgent;
-// console.log(userBrowser);
-// console.log(userBrowser.includes("Chrome"));
-// console.log(userBrowser.includes("Safari"));
-// // if (userBrowser.includes("IE")) {
-// //   console.log("Браузер Chrome");
-// // } else if (userBrowser.includes("Safari")) {
-// //   console.log("Браузер Safari");
-// // }
-
-// let message = "Вашого браузера в нашому скиску немає";
-
-// if (userBrowser.includes("IE")) {
-//   message = "Браузер IE";
-// } else if (userBrowser.includes("Opera")) {
-//   message = "Браузер Opera";
-// }
-
-// console.log(message);
-
-/*
- * Switch case
- */
-
-// switch (значення) {
-//   case значення:
-//     інструкції;
-//     break;
-
-//   case значення:
-//     інструкції;
-//     break;
-
-//   default:
-//     інструкції;
-// }
-
-/*
-? Перепишіть код за допомогою однієї конструкції switch:
-*/
-
-// const number = 4;
-
-// let message = "";
-
-// switch (number) {
-//   case 1:
-//     message = "Змінна number має значення 1";
-//     break;
-//   case 2:
-//     message = "Змінна number має значення 2";
-//     break;
-
-//   case 3:
-//     message = "Змінна number має значення 3";
-//     break;
-
-//   default:
-//     message = "Змінна number має більше значення ніж 3";
-//     break;
-// }
-
-// const number = 2;
-
-// switch (number) {
-//   case 1:
-//     console.log("Змінна number має значення 1");
-//     break;
-//   case 2:
-//     console.log("Змінна number має значення 2");
-//     break;
-//   case 3:
-//     console.log("Змінна number має значення 3");
-//     break;
-//   default:
-//     console.log("Змінна number має більше значення ніж 3");
-// }
-
-// if (number > 0) {
-//   console.log(1);
-// } else if (number < 0) {
-//   console.log(-1);
-// } else {
-//   console.log(0);
-// }
-// const min = 10;
-
-// const inTime = true;
-// console.log(inTime === min >= 0 && min < 15);
-// switch (inTime) {
-//   case min >= 0 && min < 15:
-//     console.log("перша чверть години");
-//     break;
-//   case min >= 15 && min < 30:
-//     console.log("друга чверть години");
-//     break;
-//   case min >= 30 && min < 45:
-//     console.log("третя чверть години");
-//     break;
-//   case min >= 45 && min < 60:
-//     console.log("черверта чверть години");
-//     break;
-
-//   default:
-//     console.log("Ви не потрапили в діапозон години!");
-//     break;
-// }
-
-// const number = Number(prompt("Введіть число між 0 та 3", ""));
-
-// switch (number) {
-//   case 0:
-//     console.log("Ви ввели число 0");
-//     break;
-
-//   case 1:
-//     console.log("Ви ввели число 1");
-//     break;
-
-//   case 2:
-//     console.log("Ви ввели число 2");
-//     break;
-
-//   case 3:
-//     console.log("Ви ввели число 3");
-//     break;
-
-//   default:
-//     console.log("Ви ввели якесь інше число");
-// }
-
-// if (number === 0) {
-//   console.log("Ви ввели число 0");
-// } else if (number === 1) {
-//   console.log("Ви ввели число 1");
-// } else if (number === 2) {
-//   console.log("Ви ввели число 2");
-// } else if (number === 3) {
-//   console.log("Ви ввели число  3");
-// } else {
-//   console.log("Ви ввели якесь інше число");
-// }
-
-/*
- * Тернарний оператор
- */
-
-//<умова>? <вираз_якщо_умова_істинна> : <вираз_якщо_умова_хибна>
-
-/*
-? Перепишіть конструкцію if з використанням умовного оператора '?':
-*/
-// const a = 2;
-// const b = 3;
-// let message = "";
-
-// const message = a + b < 4 ? "Мало" : "Багато";
-
-// if (a + b < 4) {
-//   message = "Мало";
-// } else {
-//   message = "Багато";
-// }
-
-// console.log(message);
-
-/*
-?  Перепишіть if..else за допомогою декількох операторів '?'.
-*/
-
-// const login = 'Директор';
-// let message =
-//   login === "Співробітник"
-//     ? "Привіт"
-//     : login === "Директор"
-//     ? "Здравствуйте"
-//     : login === null
-//     ? "Немає логіна"
-//     : "Ми вас не знаєм";
-
-let message = login === "Співробітник" ? "Привіт" : "Ви не співробітник";
-console.log(message);
-const login = prompt("Введіть логін!");
-
-// let message = "Ми вас не знаєм!!!";
-
-// if (login === "Співробітник") {
-//   message = "Привіт";
-// } else if (login === "Директор") {
-//   message = "Здравствуйте";
-// } else if (login === null) {
-//   message = "Немає логіна";
-// }
-
-// console.log(message);
-
-
+// function getRandomHexColor() {
+    //     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    //   };
